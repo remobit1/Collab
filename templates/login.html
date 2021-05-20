@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="UTF-8"> 
+    <link rel="stylesheet" href="/static/stylesheets/login.css">
+</head>
+<body>
+    <div id="container">
+        <form name="login" action="/login/" method="post" accept-charset="utf-8">
+            <label for="username">Username:</label>
+            <input type="text" name="username" placeholder="username" required>
+            <label for="password">Password:</label>
+            <input type="password" name="password" placeholder="password" required>
+            <div id="lower">
+                <input type="checkbox"><label for="checkbox">
+                    Keep me logged in
+                </label>
+                <input type="submit" value="Login">
+            </div><!--/ lower-->
+        </form>
+    </div>
+</body>
+</html>

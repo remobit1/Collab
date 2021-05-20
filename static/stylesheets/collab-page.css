@@ -1,0 +1,159 @@
+body {
+    height: 125vh;
+    margin-top: 60px;
+    background: #ebeceeaf;
+    
+}
+
+body * {
+    font-family: 'Source Sans Pro', Helvetica, Arial,
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    z-index: 9999;
+    background-color: black;
+}
+
+main {
+    z-index: -1;
+    position: relative;
+    top: 50px;
+}
+.collab-list {
+    overflow: hidden;
+    width: 100%;
+    
+}
+
+.collab-links  {
+    list-style-type: none;
+    float: right;
+    
+}
+
+.collab-links li{
+    display: inline;
+    white-space: nowrap;
+    margin: 10px;
+}
+
+.collab-links a{
+    color: white;
+    text-decoration: none;
+
+}
+
+.logo {
+    margin-bottom: 2px;
+    vertical-align: bottom;
+    text-decoration: none;
+    font-size: 40px;
+    color: #ece57e;
+}
+
+.banner-area {
+    border-bottom: gray;
+    background-color: #a4cbebaf;
+    margin-top: 0px;
+    box-shadow: 0 0 25px 0 black;
+    position: fixed;
+    top: 20px;
+    height: 30px;
+    left: 0;
+    right: 0;
+}
+nav ul li {
+    position: relative;
+    
+}
+
+.separator {
+    position: absolute;
+    right: -9px;
+    height: 1em;
+    width: 1px;
+    background-color: white;
+
+}
+.filters {
+    list-style-type: none;
+    float: right;
+}
+
+.filters li {
+    font-weight:bold;
+    display: inline;
+    white-space: nowrap;
+}
+
+.filters li a {
+    padding: 0.5em;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    text-align: end;
+}
+
+.card {
+    position: relative;
+    display: inline-block;
+    margin: 1rem;
+    max-width: 100%;
+    -webkit-column-break-inside: avoid;
+    padding: 1rem 1rem 1rem 1rem;
+    border: 1px solid #ece57e;
+    background-color: white;
+    box-shadow: 0px -1px 2px rgba(58, 58, 58, 0.1), 1px 1px 2px rgba(58, 58, 58, 0.1);
+}
+
+.card:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4rem;
+    left: 0px;
+    top: 0px;
+}
+
+.card .header {
+    font-size: 1rem;
+    margin: 0.75rem 0rem 0rem 0rem;
+}
+
+.card .blurb {
+    font-size: 0.85rem;
+    display: block;
+    display: -webkit-box;
+    margin: 0rem;
+    max-width: 100%;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+.dynamic-grid {
+    position: relative;
+    z-index: 1;
+    -webkit-columns: 240px 3;
+            columns: 240px 3;
+    -webkit-column-gap: 15px;
+            column-gap: 15px;
+}
+
+
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>   
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/static/stylesheets/collab-page.css">
+    </head>
+    <body>
+    <header>
+        <nav class="collab-list">
+            <ul class="collab-links">
+                {{range $cspace := .CollabSpacesFollowed}}
+                <li><a href="http://localhost:8080/on/{{$cspace}}">{{$cspace}}</a>
+                    <div class="separator"></div>
+                </li>     
+                {{end}}
+            </ul>
+        </nav>
+    </header>        
+    <div id="banner-area" class="banner-area">
+        <a id="logo" class="logo" href="/">Collab!</a>
+        <ul class="filters">
+            <li><a href="#">All</a></li>
+            <li><a href="#">Trending</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="http://localhost:8080/login/">Login</a></li>
+        </ul>
+    </div>
+    <main>
+        <div class = "dynamic-grid">
+        {{range .Projects}}
+                <div id={{.Name}} class="card">
+                    <img src="/static/img/{{index .ProjectImgs 0}}" alt={{.Name}} style="width:100%">
+                    <div class="container">
+                        <h4 class = "header">
+                            {{index .Tags 0}}
+                        </h4>
+                        <p class = "blurb">
+                            {{.Description}}
+                        </p>
+                    </div>
+                </div>
+            {{end}}
+        </div>
+    </main>
+    </body>
+</html> 
